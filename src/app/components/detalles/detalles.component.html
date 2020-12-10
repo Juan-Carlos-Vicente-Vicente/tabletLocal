@@ -1,0 +1,24 @@
+<p>detalles works!</p>
+<a [routerLink]="['/']">Login</a><br />
+<a [routerLink]="['/tablet']">Tablet</a>
+<h1>El ID del usuario es: {{identificador}}</h1>
+<div *ngFor="let user of lista">
+    <div *ngIf="user.identifier == identificador">
+        El nombre es: {{user.identity.name}}<br />
+        Los apellidos son: {{user.identity.firstname}}
+        {{user.identity.secondname}} <br />
+        <div *ngIf="user.identity.sex == 'f'">
+            El género es femenino
+        </div>
+        <div *ngIf="user.identity.sex == 'm'">
+            El género es masculino
+        </div>
+        La fecha de nacimiento es: {{user.identity.dateofbirth}} <br />
+        La altura es: {{user.identity.height}} cm.<br />
+        Trabaja en {{user.job}} <br />
+        Dinero en el banco asciende a un total de
+        <div> {{user.bank_money}} €</div>
+
+    </div>
+</div>
+<!-- {{user.identity.}} -->

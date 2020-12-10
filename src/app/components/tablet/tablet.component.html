@@ -1,0 +1,27 @@
+<a [routerLink]="['/']">Login</a>
+
+<form>
+    <label>Nombre</label>
+    <input type="text" name="nombre" #nombre><br />
+    <label>Apellido 1</label>
+    <input type="text" name="name1" #name1><br />
+    <label>Apellido 2</label>
+    <input type="text" name="name2" #name2><br />
+    <input type="search" />
+</form>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Detalle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usuarios">
+            <td>{{user.identity.name}}</td>
+            <td>{{user.identity.firstname}}</td>
+            <td><button (click)="mostrarDetalles(user.identifier)">Detalles</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+<form #login="ngForm">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    Nombre
+                </td>
+                <td>
+                    <input type="text" name="nombre" #nombre value="S2VTournament">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password
+                </td>
+                <td>
+                    <input type="text" name="password" #password value="sogetispain">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button (click)="irTablet()">Logearse</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 *ngIf="sms != ''">
+        {{sms}}
+    </h1>
+</form>
